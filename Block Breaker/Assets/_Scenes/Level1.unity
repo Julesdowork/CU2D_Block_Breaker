@@ -206,7 +206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &399642411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d829cf732d1eba34b97764e0072f2b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverSceneName: GameOver
 --- !u!61 &399642412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -506,6 +507,7 @@ GameObject:
   - component: {fileID: 1038564071}
   - component: {fileID: 1038564070}
   - component: {fileID: 1038564072}
+  - component: {fileID: 1038564073}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -573,7 +575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038564069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.66, y: 0.35, z: 0}
+  m_LocalPosition: {x: 8, y: 0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -610,6 +612,19 @@ PolygonCollider2D:
       - {x: 1, y: -0.25}
       - {x: 0.99820423, y: 0.041579872}
       - {x: 0.51987934, y: 0.25016809}
+--- !u!114 &1038564073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038564069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1c3fa2b80b74e489d6ed5e4ae9b900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenWidthInUnits: 16
 --- !u!1 &1063552136
 GameObject:
   m_ObjectHideFlags: 0
