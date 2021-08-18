@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    [Header("Configuration Parameters")]
+    // Configuration Parameters
     [SerializeField] float screenWidthInUnits = 16f;
     [SerializeField] Vector2 screenBounds;
+
 
     // Start is called before the first frame update
     void Start()
