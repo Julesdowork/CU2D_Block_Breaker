@@ -13,6 +13,15 @@ public class GameManager : MonoBehaviour
     // State
     [SerializeField] int currentScore = 0;
 
+    void Awake()
+    {
+        int gameManagerCount = FindObjectsOfType<GameManager>().Length;
+        if (gameManagerCount > 1)
+            Destroy(gameObject);
+        else
+            DontDestroyOnLoad(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
