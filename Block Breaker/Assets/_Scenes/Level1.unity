@@ -423,6 +423,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8379180812306679786, guid: f0eabb93dee15164c8de99149dc62fef, type: 3}
   m_PrefabInstance: {fileID: 95075354}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &98213261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3374233631548207535, guid: 339bbacffefaf3147a9472e0729467f3, type: 3}
+  m_PrefabInstance: {fileID: 3917144616862467916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &121512029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2547,6 +2558,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2318634227400538299, guid: 3cf416cbe7a9a56449a3f9a9f0dddc15, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 98213261}
     - target: {fileID: 2318634227400538308, guid: 3cf416cbe7a9a56449a3f9a9f0dddc15, type: 3}
       propertyPath: m_Name
       value: Game Manager
