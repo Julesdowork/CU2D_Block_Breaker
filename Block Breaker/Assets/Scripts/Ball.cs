@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     Vector2 paddleToBallVector;
     bool hasStarted = false;
 
-    // Cache
+    // Cached References
     AudioSource audioSource;
 
     // Start is called before the first frame update
