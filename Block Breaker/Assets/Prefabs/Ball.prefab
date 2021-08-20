@@ -137,4 +137,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paddle1: {fileID: 0}
   xPush: 2
-  yPush: 15
+  yPush: 7.5
