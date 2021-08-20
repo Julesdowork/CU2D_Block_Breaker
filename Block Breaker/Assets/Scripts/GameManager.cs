@@ -17,7 +17,10 @@ public class GameManager : MonoBehaviour
     {
         int gameManagerCount = FindObjectsOfType<GameManager>().Length;
         if (gameManagerCount > 1)
+        {
+            gameObject.SetActive(false);
             Destroy(gameObject);
+        }
         else
             DontDestroyOnLoad(gameObject);
     }
