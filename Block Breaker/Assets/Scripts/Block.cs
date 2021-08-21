@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    // Configuration Parameters
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject impactEffect;
+    [SerializeField] int maxHits;
+
+    // State
+    [SerializeField] int timesHit;      // TODO deserialize when done debugging
 
     // Cached References
     Level level;
@@ -18,7 +23,16 @@ public class Block : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D other)
 	{
         if (gameObject.CompareTag("Breakable"))
-		    DestroyBlock();
+		{
+			HandleHit();
+		}
+	}
+
+	private void HandleHit()
+	{
+		timesHit++;
+		if (timesHit >= maxHits)
+			DestroyBlock();
 	}
 
 	private void CountBreakableBlocks()
