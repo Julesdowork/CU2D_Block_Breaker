@@ -11,14 +11,21 @@ public class Block : MonoBehaviour
     Level level;
 
     void Start()
-    {
-        level = FindObjectOfType<Level>();
-        level.CountBreakableBlocks();
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
 	{
-		DestroyBlock();
+		CountBreakableBlocks();
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+        if (gameObject.CompareTag("Breakable"))
+		    DestroyBlock();
+	}
+
+	private void CountBreakableBlocks()
+	{
+		level = FindObjectOfType<Level>();
+		if (gameObject.CompareTag("Breakable"))
+			level.CountBlocks();
 	}
 
 	private void DestroyBlock()
