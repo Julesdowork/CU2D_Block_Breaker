@@ -78,6 +78,6 @@ PrefabInstance:
     - target: {fileID: 8379180812306679788, guid: f0eabb93dee15164c8de99149dc62fef, type: 3}
       propertyPath: hitSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: aae8039b33ece314580995be53249ce5, type: 3}
+      objectReference: {fileID: 21300000, guid: 2b863fba2f6a68044ae6bb04dbd96d9d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0eabb93dee15164c8de99149dc62fef, type: 3}

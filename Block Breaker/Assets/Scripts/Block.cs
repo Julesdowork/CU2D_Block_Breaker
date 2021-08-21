@@ -7,7 +7,6 @@ public class Block : MonoBehaviour
     // Configuration Parameters
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject impactEffect;
-    [SerializeField] int maxHits;
     [SerializeField] Sprite[] hitSprites;
 
     // State
@@ -35,6 +34,7 @@ public class Block : MonoBehaviour
 	private void HandleHit()
 	{
 		timesHit++;
+		int maxHits = hitSprites.Length + 1;
 		if (timesHit >= maxHits)
 			DestroyBlock();
         else
@@ -66,6 +66,9 @@ public class Block : MonoBehaviour
     private void ShowNextHitSprite()
     {
         int spriteIndex = timesHit - 1;
-        spriteRenderer.sprite = hitSprites[spriteIndex];
+		if (hitSprites[spriteIndex] != null)
+        	spriteRenderer.sprite = hitSprites[spriteIndex];
+		else
+			Debug.LogError(name + ": Block sprite is missing from array");
     }
 }
