@@ -2549,7 +2549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2318634227400538308, guid: 3cf416cbe7a9a56449a3f9a9f0dddc15, type: 3}
       propertyPath: m_Name
-      value: Game Manager
+      value: Game Session
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cf416cbe7a9a56449a3f9a9f0dddc15, type: 3}
