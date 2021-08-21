@@ -8,15 +8,19 @@ public class Block : MonoBehaviour
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject impactEffect;
     [SerializeField] int maxHits;
+    [SerializeField] Sprite[] hitSprites;
 
     // State
     [SerializeField] int timesHit;      // TODO deserialize when done debugging
 
     // Cached References
     Level level;
+    SpriteRenderer spriteRenderer;
 
     void Start()
 	{
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
 		CountBreakableBlocks();
 	}
 
@@ -33,6 +37,8 @@ public class Block : MonoBehaviour
 		timesHit++;
 		if (timesHit >= maxHits)
 			DestroyBlock();
+        else
+            ShowNextHitSprite();
 	}
 
 	private void CountBreakableBlocks()
@@ -55,5 +61,11 @@ public class Block : MonoBehaviour
     {
         GameObject effect = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effect, 2f);
+    }
+
+    private void ShowNextHitSprite()
+    {
+        int spriteIndex = timesHit - 1;
+        spriteRenderer.sprite = hitSprites[spriteIndex];
     }
 }
