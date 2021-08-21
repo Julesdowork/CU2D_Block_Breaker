@@ -4318,6 +4318,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2318634227400538299, guid: 3cf416cbe7a9a56449a3f9a9f0dddc15, type: 3}
+      propertyPath: autoplay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318634227400538299, guid: 3cf416cbe7a9a56449a3f9a9f0dddc15, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1769161090}
