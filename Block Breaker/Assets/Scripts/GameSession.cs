@@ -12,6 +12,7 @@ public class GameSession : MonoBehaviour
 
     // State
     [SerializeField] int currentScore = 0;
+    [SerializeField] bool autoplay;
 
     void Awake()
     {
@@ -41,5 +42,10 @@ public class GameSession : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public bool IsAutoplaying()
+    {
+        return autoplay;
     }
 }
